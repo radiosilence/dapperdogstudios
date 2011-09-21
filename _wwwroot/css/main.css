@@ -10,6 +10,7 @@ body {
     color: #e1dccb;
     text-shadow: 2px 2px rgba(0,0,0,.4);
 }
+
 p.intro {
   font-size: 28pt;
   text-align: center;
@@ -20,6 +21,7 @@ p.detail {
   text-align: center;
   margin-bottom: .5em;
 }
+
 
 a {
     text-decoration: underline;
@@ -33,4 +35,53 @@ h1#title {
   width: 800px;
   height: 427px;
   margin-bottom: 2em;
+}
+
+
+section {
+  display: block;
+  height: 100%;
+}
+
+section header {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  border-bottom: 1px solid #e1dccb;
+  margin: 4em 0 1.5em 0;
+}
+section header ul li {
+  float: left;
+  font-size: 16pt;
+  list-style-type: none;
+  margin-right: 1em;
+}
+
+section header ul li a {
+  color: #e1dccb;
+  display: block;
+  padding: 0 0 5px 0;
+  text-decoration: none;
+}
+
+section header ul li a.selected {
+  border-bottom: 3px solid #e1dccb;
+}
+
+section header ul li a:hover {
+  border-bottom: 3px solid #6e5944;
+}
+
+section p {
+  margin-bottom: 1em;
+}
+
+div.footer {
+  width: 100%;
+  background-image: -webkit-linear-gradient(#0c0a06, #030201);
+  background-color: #0d0b08;
+  margin: 4em 0 0 0;
+  padding: 1em 0 0 0;
+  border-top: 1px solid #e1dccb;
+  height: 200px;
 }
