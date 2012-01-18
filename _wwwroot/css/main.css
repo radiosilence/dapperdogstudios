@@ -72,6 +72,20 @@ section header ul li a:hover {
   border-bottom: 3px solid #6e5944;
 }
 
+section h1 {
+  font-size: 24pt;
+  font-weight: bold;
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+section h2 {
+  font-size: 18pt;
+  font-weight: bold;
+  margin-top: 1.5em;
+  margin-bottom: 1em;
+}
+
 section p {
   margin-bottom: 1em;
 }

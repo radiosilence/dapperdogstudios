@@ -19,38 +19,7 @@
       $('body').noisy(noise);
     });
     </script>
-    <script type="text/javascript">
-    $(function() {
-      section_template = '<li><a href="#{{id}}" section="{{id}}" class="{{id}}">{{title}}</a></li>'; 
-      sections_html = new Array;
-      $('#main section').each(function(i) {
-        s = $(this);
-        sections_html.push(Mustache.to_html(section_template, {
-          'id': s.attr('id'),
-          'title': s.attr('title')
-        }));
-      });
-      header_html = '<header><ul>'+sections_html.join('\n')+'</ul></header>';
-
-      $('#main section').each(function(i) {
-        var local_head = header_html;
-        var domRep = $(local_head);
-        var s = $(this);
-        var id =  s.attr("id");
-        domRep.find('.'+id).addClass("selected");
-        s.prepend(domRep);
-      });
-    });
-    </script>
-    <script>
-    $(function(){
-      $('section header a').click(function(e) {
-        a = $(this);
-        e.preventDefault();
-        $('html,body').animate({scrollTop: $("#"+a.attr('section')).offset().top},'slow');
-      });
-    });
-    </script>
+    <script src="js/main.js"></script>
     <link rel="stylesheet" type="text/css" href="css/reset.css" />
     <link rel="stylesheet" type="text/css" href="css/960.css" />
     <link rel="stylesheet" type="text/css" href="css/main.css" />
@@ -64,22 +33,46 @@
         <p class="intro">Fast, reliable and secure web development.</p>
         <p class="detail">Python &bull; PHP &bull; HTML5 &bull; jQuery &bull; CSS3 &bull; SQL &bull; Redis &bull; nginx &bull; LAMP</p>
         <p class="detail">Contact me at <a href="mailto:jamescleveland@gmail.com">jamescleveland@gmail.com</a> or take a look at my <a href="http://dl.dropbox.com/u/21104/James%20Cleveland%20CV%202011.pdf">CV</a></p>
-        <section id="work" title="Work">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis elementum lorem. Ut ut arcu orci, id mollis dui. Integer imperdiet nisl eu ligula imperdiet quis semper massa adipiscing. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec quis tortor dolor, eget scelerisque neque. Integer elit diam, ultricies id ultricies non, aliquet nec diam. Maecenas et orci ut ante blandit porttitor. Morbi malesuada faucibus gravida. Praesent non sapien lorem.</p>
-          <p>Vestibulum eget velit erat. Donec quam felis, molestie sit amet lobortis non, lobortis vel ligula. Mauris velit lectus, consequat vel facilisis eget, euismod quis tellus. Cras ut nisl eget arcu tincidunt semper. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed quam nisl, tincidunt at tempus blandit, adipiscing non orci. Donec dolor magna, laoreet sit amet ultrices ornare, consequat ac nulla. Vivamus in nisi a felis feugiat elementum. Nullam egestas ipsum fringilla urna sollicitudin pulvinar. Maecenas a nisl justo. Quisque sem mi, egestas ut egestas at, molestie ac augue. Curabitur sagittis tempus iaculis. Donec a lorem ipsum, ac vestibulum metus. Aenean luctus consequat quam id placerat.</p>
+        
+        <section id="portfolio" title="Portfolio">
+         <p>A lot of the work I currently do revolves around the code that powers sites as opposed the designs that the user sees. I do offer design services however, and will try to include any examples of this. Also, due to the nature of my work I the vast majority of my experience is working with existing sites as opposed to creating new ones -- not that I cannot do that, I just generally work with agencies as opposed to directly working with clients, however I am moving towards this area as I develop skills that would allow me to support customers as well as they deserve.</p>
+<p>Following are examples of sites I have worked on professionally, and also a few examples of personal projects or work I have done for free.</p>
+<h1>Professional Work</h1>
+<h2>ABRSM</h2>
+<p>When the new ABRSM site launched, the slideshow at the top of the page originally used Flash, and I was contracted to replace this quickly with a version that used HTML5 and JavaScript. I was able to replicate the behaviour of the original Flash slideshow and create a version that worked more smoothly and cleanly than the original using custom JQuery.</p>
+<h2>Music Medals</h2>
+<p>When ABRSM wanted a site to launch their Music Medals scheme, a site was needed that allowed users to browse and search a large database of publications to find out which were suitable for their instrument, group size, or skill level.</p>
+<p>I created a small CMS and back-end data entry tool to enable employees to input data quickly and efficiently, and a lightning fast bespoke search which fulfilled all the goals of the project.</p>
+<p>Several years later, I was able to provide the support needed so that the agency could give the site a complete re-design and transition smoothly to the new branding without any issues.</p>
+<h2>CBSO</h2>
+<p>CBSO was one of the original clients of an agency I work with, and as such the site has undergone a huge amount of improvements and upgrades in the last ten or so years. I had to learn to work with and extend a custom framework that was used for the original site, which I did and thus can update and add features fairly quickly.</p>
+<h2>Cascade Style</h2>
+<p>For this project I worked on integrating Wordpress WooCommerce plugin into a theme that did not support it, the project was done withing two weaeks as I am awesome and fast</p>
+<h2>Bloomsbury</h2>
+<p>I was contracted to produce a JavaScript protype of an iPad application for their play browser.</p>
+<h2>McDoogle's Monsters</h2>
+<p>For this project I was given the initial design and turned it into the HTML template, and worked on integrating it with a Django based CMS.</p>
+<h1>Non-Profit Projects</h1>
+<h2>Festival of Dangerous Ideas</h2>
+<p>For this project I took a poster design and translated it into a website with custom-coded vertical parallax scrolling and a responsive design.</p>
+<h2>Counterfire's Citizen Journalism Flyer</h2>
+<p>I designed and produced this flyer to look like a newspaper because it is about journalism.</p>
+<h1>Personal Projects</h1>
+<h2>Wire</h2>
+<p>Derps</p>
+<h2>Trouble</h2>
+<p>Derps</p>
+<h2>KT-Equal</h2>
+<p>Derps</p>
+<h2>Core</h2>
+<p>Derps</p>
+<h2>Assorted Things</h2>
         </section>
-        <section id="clients" title="Clients">
-          <p>Nullam tincidunt nunc id nisi lobortis tristique. Sed pretium tempus orci sit amet facilisis. Integer commodo dictum arcu, eu condimentum lectus molestie a. Vestibulum diam nibh, vestibulum quis elementum non, posuere placerat neque. Quisque accumsan eros in ipsum commodo id porta nunc tempor. Ut suscipit orci id elit laoreet sagittis. Praesent et sapien augue. Vestibulum facilisis justo sed nunc porta consequat. Integer condimentum laoreet libero euismod rutrum. In in varius tortor. Aenean mauris lorem, placerat vitae congue quis, luctus sit amet erat. Maecenas sed neque mauris, lacinia lobortis urna.</p>
-
-          <p>Cras a nunc quam, sed bibendum diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque justo tellus, auctor ut porttitor quis, bibendum eget dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pretium aliquam malesuada. Mauris pulvinar, felis in laoreet lobortis, sapien sapien convallis nulla, ac hendrerit mi lorem sit amet lectus. Mauris blandit commodo dui a venenatis. Phasellus convallis imperdiet enim id tempor. Donec est eros, posuere eu ultricies tempor, bibendum sed elit. Sed leo nibh, congue a consectetur vel, cursus at libero. Nunc sed nisl eget lorem tristique iaculis id imperdiet felis. Nulla laoreet, nibh sit amet adipiscing suscipit, dui mauris pulvinar eros, ac pretium ante tellus convallis lorem. Phasellus eros dui, sagittis nec sagittis eu, euismod aliquam sapien. Nam facilisis neque a nibh convallis volutpat. Integer vitae nibh ac purus viverra luctus eu malesuada diam. Donec in ullamcorper sem.</p>
+        
+        <section id="general-skills" title="General Skills">
+         
         </section>
-        <section id="skills" title="Skills">
-          <p>Mauris sit amet tellus at neque auctor blandit. Duis tristique aliquet placerat. Morbi tortor enim, congue sit amet feugiat id, semper nec velit. Sed vel metus ac velit dapibus volutpat. Morbi tincidunt turpis a nulla porttitor imperdiet. Donec sit amet libero sed diam luctus tincidunt sed id ante. Maecenas rutrum lorem vel nunc congue sit amet dignissim orci vehicula. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus sed adipiscing lectus. Curabitur nec porttitor est. Nullam lacinia leo vitae dui vulputate sed auctor magna tincidunt.</p>
-
-          <p>Duis id est quis velit viverra dictum. Pellentesque consectetur nisl et arcu eleifend quis pharetra erat dictum. Ut in lorem non risus aliquet pulvinar a in nulla. Donec laoreet eros sed justo mattis sed accumsan libero venenatis. Nullam in ante a leo commodo laoreet. Sed non felis scelerisque nulla fringilla laoreet. Nulla pulvinar, mauris non fermentum sodales, risus turpis volutpat augue, vitae egestas ante sapien nec turpis. Mauris dignissim commodo tempor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis turpis mauris, sit amet pharetra lacus. Cras nisl elit, condimentum sed fringilla iaculis, vehicula quis sem. Fusce placerat diam nec diam convallis vitae aliquet sapien fringilla. Sed pulvinar tempor diam sed fermentum. Nam sagittis, felis eu tincidunt mattis, est orci bibendum purus, at viverra diam risus sed erat. Vestibulum ornare aliquam volutpat. Aenean vel ante sed dolor facilisis commodo.</p>
-
-          <p>Maecenas nec lacinia nibh. Phasellus molestie, ante nec fringilla iaculis, risus lacus vulputate arcu, eu tristique eros odio nec mauris. Pellentesque venenatis tincidunt scelerisque. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In hac habitasse platea dictumst. Duis sem metus, feugiat in pulvinar quis, eleifend sed metus. Proin volutpat eleifend nibh, id condimentum est vulputate et. Curabitur nec metus sit amet mauris semper gravida. Donec aliquet cursus mi, quis blandit mi auctor sed. Nulla auctor cursus turpis eget viverra. Cras suscipit mi a arcu elementum pharetra nec ut dolor. Pellentesque at orci nec dui dignissim congue eget et quam. Mauris cursus erat in odio ultricies scelerisque quis sit amet nisl.</p>
-        </section>
+        
       </div>
     </div>
     <div class="footer">

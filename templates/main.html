@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dapper Dog Studios: Fast, reliable and secure web development</title>
+    <link href='http://fonts.googleapis.com/css?family=Alike' rel='stylesheet' type='text/css' />
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/noisy/1.0/jquery.noisy.min.js"></script>
+    <script src="https://raw.github.com/janl/mustache.js/master/mustache.js"></script>
+    <script type="text/javascript">
+    $(function(){
+      noise = {
+        'intensity' : 1, 
+        'size' : 100, 
+        'opacity' : 0.032, 
+        'fallback' : '', 
+        'monochrome' : true
+      }
+      $('body').noisy(noise);
+    });
+    </script>
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/960.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+  </head>
+  <body>
+    <div class="container_12">
+      <div class="grid_12">
+        <h1 id="title">Dapper Dog Studios</h1>
+      </div>
+      <div class="grid_12" id="main">    
+        <p class="intro">Fast, reliable and secure web development.</p>
+        <p class="detail">Python &bull; PHP &bull; HTML5 &bull; jQuery &bull; CSS3 &bull; SQL &bull; Redis &bull; nginx &bull; LAMP</p>
+        <p class="detail">Contact me at <a href="mailto:jamescleveland@gmail.com">jamescleveland@gmail.com</a> or take a look at my <a href="http://dl.dropbox.com/u/21104/James%20Cleveland%20CV%202011.pdf">CV</a></p>
+        {% for section in sections %}
+        <section id="{{ section.slug }}" title="{{ section.title }}">
+         {{ section.html }}
+        </section>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="footer">
+      <div class="container_12">
+        <div class="grid_6">
+          Moo
+        </div>
+        <div class="grid_6">
+          Mooo
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
