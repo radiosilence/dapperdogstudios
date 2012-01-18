@@ -1,2 +1,10 @@
-*.un~
+*.pyc
 *.log
+*.un~
+*.tmp
+*.sublime-*
+docs/_build
+dist/
+build/
+*.egg-info/
+MANIFEST
